@@ -52,6 +52,7 @@ const SignUp = () => {
           type="text"
           className="w-[85%] md:w-[85%] rounded-md border mx-7 mt-2 p-2 mb-5 border-black "
           ref={nameRef}
+          required
         ></input>
         <label className="text-lg ml-7 font-medium ">Email</label>
         <br />
@@ -59,6 +60,7 @@ const SignUp = () => {
           type="email"
           className="w-[85%] md:w-[85%] rounded-md border mx-7 mt-2 p-2 mb-5 border-black"
           ref={emailRef}
+          required
         ></input>
         <label className="text-lg ml-7 font-medium ">Phone Number</label>
         <br />
@@ -66,6 +68,7 @@ const SignUp = () => {
           type="number"
           className="w-[85%] md:w-[85%] rounded-md border mx-7 mt-2 p-2 mb-5 border-black"
           ref={phoneRef}
+          required
         ></input>
         <label className="text-lg ml-7 font-medium ">Password</label>
         <br />
@@ -73,6 +76,7 @@ const SignUp = () => {
           type="password"
           className="w-[85%] md:w-[85%] rounded-md border mx-7  mt-2 p-2 mb-7 border-black"
           ref={passwordRef}
+          required
         ></input>
         <button type="submit" className="bg-gradient-to-r from-blue-300  to-green-400  md:mx-[90px] sm:mx-[20px] rounded-md md:px-[80px] sm:px-[40px]  md:py-4  sm:py-2 border mb-6 font-semibold text-lg">
           Register
