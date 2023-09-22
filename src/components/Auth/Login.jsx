@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     try {
@@ -19,8 +21,9 @@ const Login = () => {
       );
       if (response.status === 200) {
         toast.success("Successfully Logged In!");
-        localStorage.setItem('token',JSON.stringify(response.data.token))
-        localStorage.setItem('email',JSON.stringify(response.data.email))
+        localStorage.setItem("token", JSON.stringify(response.data.token));
+        localStorage.setItem("email", JSON.stringify(response.data.email));
+        navigate("/chatapp");
       } else {
         toast.error("Invalid Credentials!");
       }
